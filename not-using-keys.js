@@ -15,7 +15,7 @@ function App() {
           {randomNumList.map((randomNum) => (
             <RandomNumRow
               /*
-              If key is commented out, the background color won't move up with the item it was initially assigned to.
+              If key is commented out, the background color won't move up with the item it was initially assigned to when a new item is added to the list.
             */
               key={randomNum}
               randomColorList={randomColorList}
