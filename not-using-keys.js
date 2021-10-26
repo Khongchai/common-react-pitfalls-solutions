@@ -15,7 +15,8 @@ function App() {
           {randomNumList.map((randomNum) => (
             <RandomNumRow
               /*
-              If key is commented out, the background color won't move up with the item it was initially assigned to when a new item is added to the list.
+              If key is commented out, the background color won't move up with the item it was initially 
+              assigned to when a new item is added to the list -- or move down when an item is deleted.
             */
               key={randomNum}
               randomColorList={randomColorList}
@@ -47,6 +48,7 @@ function RandomNumRow({ randomColorList, randomNum, setRandomNumList }) {
       key={randomNum}
       style={{
         backgroundColor: color,
+        cursor: "pointer";
       }}
       onClick={() =>
         setRandomNumList((list) => {
